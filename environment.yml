@@ -7,5 +7,4 @@ dependencies:
   - rise
   - matplotlib
   - ipywidgets
-prefix: /Users/john/miniconda3/envs/rotation_widget
-
+  - nbextensions
