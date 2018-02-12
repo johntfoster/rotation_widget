@@ -1,10 +1,12 @@
 name: rotation_widget
 channels:
   - damianavila82
+  - conda-forge
   - defaults
 dependencies:
   - python=3
   - rise
   - matplotlib
   - ipywidgets
-  - nbextensions
+  - jupyter_contrib_nbextensions
+
