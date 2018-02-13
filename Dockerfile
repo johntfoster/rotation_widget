@@ -34,14 +34,14 @@ RUN bash miniconda.sh -b -p $HOME/miniconda; \
     conda install matplotlib ipywidgets; \
     conda install -c conda-forge jupyter_contrib_nbextensions
 
+ENV PATH ${HOME}/miniconda/bin:${PATH}
+
 RUN pip install --no-cache-dir notebook
 RUN pip install --no-cache-dir RISE
 RUN jupyter-nbextension install rise --py --sys-prefix
 RUN jupyter-nbextension enable rise --py --sys-prefix
-RUN jupyter-nbextension enable hide-input --py --sys-prefix
 
 ENV CONDA_HOME ${HOME}/miniconda
-ENV PATH ${HOME}/miniconda/bin:${PATH}
 
 USER root
 RUN mkdir ${HOME}/notebooks
