@@ -41,7 +41,8 @@ RUN pip install --no-cache-dir notebook
 RUN pip install --no-cache-dir RISE
 RUN jupyter-nbextension install rise --py --sys-prefix
 RUN jupyter-nbextension enable rise --py --sys-prefix
-#RUN jupyter-nbextension enable hide_input/main --py --sys-prefix
+RUN jupyter nbextension enable hide_input/main --sys-prefix
+RUN jupyter nbextension enable init_cell/main --sys-prefix
 
 ENV CONDA_HOME ${HOME}/miniconda
 
