@@ -33,7 +33,8 @@ RUN bash miniconda.sh -b -p $HOME/miniconda; \
     conda info -a; \
     conda install matplotlib; \
     conda install -c conda-forge jupyter_contrib_nbextensions; \
-    conda install -c conda-forge ipywidgets 
+    conda install -c conda-forge ipywidgets; \
+    conda upgrade nbformat
 
 ENV PATH ${HOME}/miniconda/bin:${PATH}
 
