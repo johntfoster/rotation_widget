@@ -31,8 +31,9 @@ RUN bash miniconda.sh -b -p $HOME/miniconda; \
     conda config --set always_yes yes --set changeps1 no; \
     conda update -q conda; \
     conda info -a; \
-    conda install matplotlib ipywidgets; \
+    conda install matplotlib; \
     conda install -c conda-forge jupyter_contrib_nbextensions
+    conda install -c conda-forge ipywidgets 
 
 ENV PATH ${HOME}/miniconda/bin:${PATH}
 
