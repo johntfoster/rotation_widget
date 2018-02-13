@@ -49,6 +49,7 @@ ENV CONDA_HOME ${HOME}/miniconda
 USER root
 RUN mkdir ${HOME}/notebooks
 COPY *.ipynb ${HOME}/notebooks/
+RUN jupyter trust ${HOME}/notebooks/*.ipynb
 COPY images ${HOME}/notebooks/images
 COPY rise.css ${HOME}/notebooks/
 RUN chown -R ${NB_USER} ${HOME}/notebooks
